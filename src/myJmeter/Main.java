@@ -48,7 +48,8 @@ public class Main {
                 "A1KK48k6c+vcg4geeo/VF9S3OA==";
         try {
            String result0 =  "frtkGlwZZcV14fpsJsC15xxLlHq7zVbRnLCuQG820748MFVsuRFYeQ1/ADYjhFofVU+RONmGTTWe5A2exVHYp1jEqCLf3M6zkOxsTJ1J12Cz23HeW3N0fL/1BISsTxosPCK8AD0eD7d+5zCgSVCYF5425NyKje3EVPl08uNp872Ar9mPEibz/f0rIJvm3j87GD6sjAQC0AxrM7S/3KkVdnYGL1Jzl0pmiYLtGvrQYTrUs5GsRYds2gpEN8iFMvnS9J9tirNwDTiEIxFWmaho3EQgXge6LcqVIiovqDteh1lGd6c5j0Ae2NE/3kqskjHX+8vAXw+oyf526RxcJADwuw==";
-           String result =  RSAUtils.decrypt(result0, priKey);
+           XRsa client = new XRsa(publicKey,priKey);
+           String result =  client.publicEncrypt("hello");
            System.out.println(result0);
            System.out.println(result);
         }catch (Exception e){
